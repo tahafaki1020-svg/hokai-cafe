@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-espresso: #211713;
+  --color-beige: #D6C1A1;
+  --color-ivory: #F3EDE3;
+  --color-ivory-soft: #EDE5D8;
+  --color-gold: #92734C;
+  --color-obsidian: #151515;
+
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #151515;
+    color: #211713;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  /* Accessible focus ring in muted gold */
+  :focus-visible {
+    outline: 1.5px solid #92734C;
+    outline-offset: 3px;
+  }
+}
+
+/* Subtle luxury drop cap for editorial prose */
+.editorial-dropcap::first-letter {
+  font-family: var(--font-serif);
+  float: left;
+  font-size: 3.75rem;
+  line-height: 0.82;
+  padding-right: 0.65rem;
+  padding-top: 0.25rem;
+  font-weight: 400;
+  color: #92734C;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

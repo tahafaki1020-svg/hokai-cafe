@@ -1,0 +1,6 @@
+{
+  "name": "HOKAI — Luxury Premium Coffee",
+  "description": "Beyond the Ordinary Brew. An international luxury coffee house devoted to single-origin terroir, small-batch roasting craftsmanship, and contemplative brewing rituals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
